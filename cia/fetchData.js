@@ -2,7 +2,9 @@ let = $accordion = document.getElementById("accordion");
 
 let ciaData = null;
 
-fetch("https://app.scrapinghub.com/api/v2/datasets/pu3PQUi5g2j/download?format=json")
+fetch(
+  "https://app.scrapinghub.com/api/v2/datasets/pu3PQUi5g2j/download?format=json"
+)
   .then((response) => {
     return response.json();
   })
@@ -34,10 +36,10 @@ fetch("https://app.scrapinghub.com/api/v2/datasets/pu3PQUi5g2j/download?format=j
       data-parent="#accordion"
     >
       <div class="card-body">
-        ${x.body}
+        ${x.paragraph}
         <br>
         <br>
-        <a href=${x.url} target="_blank">Ver más</a>
+        <a href=${x.link} target="_blank">Ver más</a>
       </div>
     </div>
   </div>
